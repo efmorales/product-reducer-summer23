@@ -34,6 +34,20 @@ function App() {
       publisher: "Sega",
       genre: "Strategy",
       price: 49.99
+    },
+    {
+      id: uuidv4(),
+      title: "Everything, Everywhere, All at Once",
+      publisher: "A24",
+      genre: "Action/Adventure",
+      price: 29.99      
+    },
+    {
+      id: uuidv4(),
+      title: "Dune",
+      publisher: "Penguin Classics",
+      genre: "Action/Adventure",
+      price: 20.99     
     }
   ]
 
@@ -53,6 +67,12 @@ function App() {
             publisher={element.publisher}
             genre={element.genre}
             price={element.price}
+            deleteProduct = {
+              (id) => dispatch({
+                type: 'delete-product',
+                id: id
+              })
+            }
           /> 
           )
         })
