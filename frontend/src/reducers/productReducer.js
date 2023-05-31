@@ -20,7 +20,11 @@ export default function productReducer (product, action) { //product is state
                         // })
             let editedArray = product.map(element =>  element.id === action.editedObj.id ? action.editedObj : element) 
             return editedArray
-        
+        case 'add-product':
+
+            let addArray;  //temp
+            return addArray
+
         default:
             alert('No matching types!')
             return product;
